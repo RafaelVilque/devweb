@@ -1,0 +1,40 @@
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  object-fit: cover; /* mantém proporção e corta o excesso */
+  border-radius: 50%; /* deixa a imagem redonda */
+}
+
+/* Cores para um tema mais escuro e melhor contraste */
+.border-primary {
+  border-color: #4a90e2; /* Azul mais vibrante para borda */
+}
+
+.shadow-md {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra mais escura */
+}
+
+/* Cores de fundo e texto para simular o tema */
+.bg-background {
+  background-color: #1a202c; /* Fundo escuro */
+}
+
+.bg-card {
+  background-color: #2d3748; /* Cartão um pouco mais claro que o fundo */
+}
+
+.border-border {
+  border-color: #4a5568; /* Borda sutil */
+}
+
+.text-primary {
+  color: #63b3ed; /* Azul claro para títulos */
+}
+
+.text-muted-foreground {
+  color: #a0aec0; /* Cinza claro para texto secundário */
+}
+
+.text-foreground {
+  color: #e2e8f0; /* Branco acinzentado para texto principal */
+}
