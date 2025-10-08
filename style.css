@@ -4,11 +4,12 @@ body {
     margin: 0;
     padding: 0;
     background-color: #1a202c; /* Fundo escuro */
-    color: #e2e8f0; /* Branco acinzentado para texto principal */
+    color: #4777b6; /* Branco acinzentado para texto principal */
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    box-sizing: border-box;
 }
 
 /* Estilo do cartão principal do portfólio */
@@ -21,6 +22,17 @@ body {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
     padding: 30px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo do cartão */
+}
+
+/* Container da imagem de perfil no topo */
+.profile-image-container-top {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
 /* Seletor de classe para a imagem de perfil */
@@ -31,18 +43,15 @@ body {
     border-radius: 50%;
     border: 4px solid #4a90e2; /* Azul mais vibrante para borda */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    margin-bottom: 20px;
 }
 
-/* Seletor de descendente para a seção de introdução */
-.intro-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* Seção de introdução (agora apenas texto) */
+.intro-section-top {
     text-align: center;
     margin-bottom: 30px;
     padding-bottom: 20px;
     border-bottom: 1px solid #4a5568;
+    width: 100%; /* Ocupa a largura total para centralizar o texto */
 }
 
 /* Seletor de elemento para títulos dentro da seção de introdução */
@@ -62,6 +71,8 @@ body {
 /* Seletor de ID para a seção Sobre Mim */
 #about-section {
     padding-top: 20px;
+    width: 100%; /* Ocupa a largura total */
+    text-align: left; /* Alinha o texto à esquerda */
 }
 
 /* Seletor de elemento para títulos de seção */
@@ -80,17 +91,41 @@ section p {
     line-height: 1.6;
 }
 
+/* Seção de Hard Skills */
+.hard-skills-section {
+    width: 100%;
+    padding-top: 20px;
+    border-top: 1px solid #4a5568;
+    margin-top: 30px;
+    text-align: left;
+}
+
+.skills-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.skill-button {
+    background-color: #4a90e2; /* Cor de fundo do botão */
+    color: #ffffff; /* Cor do texto do botão */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.skill-button:hover {
+    background-color: #357ABD; /* Cor de fundo do botão ao passar o mouse */
+}
+
 /* Media Queries para responsividade */
 @media (min-width: 768px) {
-    .intro-section {
-        flex-direction: row;
-        text-align: left;
-        align-items: flex-start;
-    }
-
-    .profile-pic {
-        margin-right: 30px;
-        margin-bottom: 0;
+    .intro-section-top {
+        text-align: center;
     }
 
     .intro-text h1 {
@@ -122,5 +157,9 @@ section p {
 
     section h2 {
         font-size: 1.8em;
+    }
+
+    .skills-buttons {
+        justify-content: center;
     }
 }
